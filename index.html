@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yaman Al-Eryani | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#" class="brand">YA</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <button class="btn-outline" id="openContact">Contact Me</button>
+  </header>
+
+  <!-- PAGE 1: HERO -->
+  <main class="page" id="home">
+    <section class="card hero-card reveal">
+      <div class="avatar-wrap">
+        <img src="assets/me.jpg" alt="Yaman Al-Eryani" class="avatar"/>
+      </div>
+
+      <h1 class="hero-title">
+        Hey, I'm <span class="accent">Yaman Al-Eryani</span>. Here, you can check out what I've been working on.
+      </h1>
+
+      <p class="hero-subtitle">
+        Studying BSc Honours Computer Science at Wilfrid Laurier University, Waterloo
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#projects">View Projects</a>
+        <div class="socials">
+          <a href="mailto:yaman.aleryani@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PAGE 2: PROJECTS -->
+  <section class="page" id="projects">
+    <section class="card reveal">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+        <!-- WORDLE PLACEHOLDER -->
+        <article class="project-card" id="proj-wordle">
+          <div class="project-thumb">
+            <span class="project-badge">Game</span>
+            <div class="thumb-emoji">🧩</div>
+          </div>
+          <h3>Custom Wordle (Dictionary-powered)</h3>
+          <p class="project-meta">Vanilla JS • Dictionaries • UI/UX</p>
+          <div class="project-actions">
+            <button class="btn-sm" data-open="wordleModal">Learn More</button>
+            <a class="btn-link" href="https://github.com/yourusername/wordle" target="_blank">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </section>
+
+  <!-- PROJECT MODAL: WORDLE -->
+  <div class="modal" id="wordleModal" aria-hidden="true">
+    <div class="modal-card project-modal-card">
+      <button class="modal-close" data-close="wordleModal" aria-label="Close">&times;</button>
+      <h3>Custom Wordle (Dictionary-powered)</h3>
+
+      <div class="project-sections">
+        <section>
+          <h4>🎯 Project Overview</h4>
+          <p>A browser-based Wordle clone that uses curated dictionaries for valid guesses and daily targets. Built to explore word lists, input validation, and clear feedback UX.</p>
+        </section>
+
+        <section>
+          <h4>🧰 Technologies Used</h4>
+          <p>HTML, CSS, JavaScript. Word lists (JSON), state management, localStorage for streaks.</p>
+        </section>
+
+        <section>
+          <h4>🔑 Key Learnings</h4>
+          <p>Dictionary lookups and performance, keyboard UX, accessibility for color feedback, and clean component-like JS without frameworks.</p>
+        </section>
+
+        <section>
+          <h4>🚀 Future Development</h4>
+          <p>Daily puzzle seed, hard mode, statistics dashboard, shareable results, and mobile-first keyboard.</p>
+        </section>
+      </div>
+
+      <div class="modal-actions">
+        <a class="btn" href="https://github.com/yourusername/wordle" target="_blank">
+          <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
+        <button class="btn-outline" data-close="wordleModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 3: SKILLS -->
+  <section class="page" id="skills">
+    <section class="card reveal">
+      <h2>Skills</h2>
+
+      <!-- Languages -->
+      <div class="skill-block">
+        <h3><span class="emoji">💻</span> Languages</h3>
+        <ul class="skill-list">
+          <li><i class="fa-brands fa-html5"></i> HTML5</li>
+          <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+          <li><i class="fa-brands fa-js"></i> JavaScript</li>
+          <li><i class="fa-brands fa-java"></i> Java</li>
+          <li><i class="fa-brands fa-python"></i> Python</li>
+          <li><i class="fa-solid fa-c"></i> C / C++</li>
+          <li><i class="fa-brands fa-r-project"></i> R</li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-block">
+        <h3><span class="emoji">🧰</span> Tools & Platforms</h3>
+        <ul class="skill-list">
+          <li><i class="fa-brands fa-github"></i> Git & GitHub</li>
+          <li><i class="fa-brands fa-docker"></i> Docker</li>
+          <li><i class="fa-brands fa-visual-studio"></i> Visual Studio Code</li>
+          <li><i class="fa-brands fa-microsoft"></i> Microsoft Office</li>
+          <li><i class="fa-brands fa-r-project"></i> R / RStudio</li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeContact" aria-label="Close">&times;</button>
+      <h3>Send me a message</h3>
+      <!-- Formspree (replace YOUR_FORM_ID) -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Say hi 👋" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <div class="modal-foot">
+        or email me directly:
+        <a href="mailto:yaman.aleryani@gmail.com">yaman.aleryani@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
