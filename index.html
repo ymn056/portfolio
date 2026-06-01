@@ -2,168 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio website for Yaman Al-Eryani, a Computer Science student at Wilfrid Laurier University." />
   <title>Yaman Al-Eryani | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAV -->
   <header class="nav">
-    <a href="#" class="brand">YA</a>
-    <nav>
+    <a href="#home" class="brand">YA</a>
+
+    <nav class="nav-links">
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <button class="btn-outline" id="openContact">Contact Me</button>
+
+    <button class="btn-outline nav-contact" id="openContact">Contact Me</button>
   </header>
 
-  <!-- PAGE 1: HERO -->
-  <main class="page" id="home">
-    <section class="card hero-card reveal">
-      <div class="avatar-wrap">
-        <img src="assets/me.jpg" alt="Yaman Al-Eryani" class="avatar"/>
+  <main>
+    <section class="page hero-page" id="home">
+      <div class="card hero-card reveal">
+        <div class="hero-layout">
+          <div class="avatar-wrap">
+            <img src="assets/me.jpg" alt="Yaman Al-Eryani" class="avatar" />
+          </div>
+
+          <div class="hero-text">
+            <p class="eyebrow">Computer Science Student</p>
+
+            <h1 class="hero-title">
+              Hey, I'm <span class="accent">Yaman Al-Eryani</span>.
+            </h1>
+
+            <p class="hero-subtitle">
+              I'm a BSc Honours Computer Science student at Wilfrid Laurier University in Waterloo. I’m interested in building practical software, improving how I solve technical problems, and creating projects that are clear, usable, and actually work well.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn" href="#projects">View Project</a>
+
+              <a class="btn-secondary" href="https://github.com/ymn056" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+
+              <a class="btn-secondary" href="https://www.linkedin.com/in/yaman-al-eryani-1358431bb/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <h1 class="hero-title">
-        Hey, I'm <span class="accent">Yaman Al-Eryani</span>. Here, you can check out what I've been working on.
-      </h1>
+    <section class="page" id="projects">
+      <div class="card reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Work</p>
+          <h2>Projects</h2>
+        </div>
 
-      <p class="hero-subtitle">
-        Studying BSc Honours Computer Science at Wilfrid Laurier University, Waterloo
-      </p>
+        <article class="project-card featured-project">
+          <div class="project-thumb flight-thumb">
+            <span class="project-badge">Full-Stack Web App</span>
+            <i class="fa-solid fa-plane-departure thumb-icon"></i>
+          </div>
 
-      <div class="hero-actions">
-        <a class="btn" href="#projects">View Projects</a>
-        <div class="socials">
-          <a href="mailto:yaman.aleryani@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <div class="project-content">
+            <h3>Flight Reservation System</h3>
+
+            <p class="project-meta">
+              Flask • SQLite • Python • HTML • CSS • JavaScript
+            </p>
+
+            <p>
+              A full-stack airline reservation system designed to handle the main parts of the flight booking process, including user registration, flight search, seat selection, booking management, payments, and reminder notifications.
+            </p>
+
+            <p>
+              The system was built with separate user and staff workflows. On the customer side, users can create accounts, search available flights, choose seats, and manage bookings. On the staff side, the application provides tools for reviewing flight information, booking records, user activity, and operational data that can support business and flight-planning decisions.
+            </p>
+
+            <ul class="project-points">
+              <li>Used Flask routes, templates, and SQLite database models to organize the application around clear user and staff features.</li>
+              <li>Built booking flows that manage shared flight and seat data, making the system suitable for many users interacting with flight availability and reservations.</li>
+              <li>Worked with seeded databases, authentication logic, role-based access, and backend tools for viewing important reservation and flight data.</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="btn" href="https://github.com/ymn056/flight-reservation-system-group40/tree/main" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> View GitHub Project
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page" id="skills">
+      <div class="card reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Technical Toolkit</p>
+          <h2>Skills</h2>
+          <p>Technologies and tools I have used across coursework, labs, and personal projects.</p>
+        </div>
+
+        <div class="skill-block">
+          <h3><span class="emoji">💻</span> Languages</h3>
+
+          <ul class="skill-list">
+            <li><i class="fa-brands fa-html5"></i> HTML5</li>
+            <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+            <li><i class="fa-brands fa-js"></i> JavaScript</li>
+            <li><i class="fa-brands fa-python"></i> Python</li>
+            <li><i class="fa-brands fa-java"></i> Java</li>
+            <li><i class="fa-solid fa-c"></i> C / C++</li>
+            <li><i class="fa-solid fa-database"></i> SQL</li>
+            <li><i class="fa-brands fa-r-project"></i> R</li>
+          </ul>
+        </div>
+
+        <div class="skill-block">
+          <h3><span class="emoji">🧰</span> Tools & Platforms</h3>
+
+          <ul class="skill-list">
+            <li><i class="fa-brands fa-github"></i> Git & GitHub</li>
+            <li><i class="fa-brands fa-python"></i> Flask</li>
+            <li><i class="fa-solid fa-database"></i> SQLite</li>
+            <li><i class="fa-brands fa-docker"></i> Docker</li>
+            <li><i class="fa-solid fa-terminal"></i> Linux / Terminal</li>
+            <li><i class="fa-solid fa-code"></i> Visual Studio Code</li>
+            <li><i class="fa-brands fa-microsoft"></i> Microsoft Office</li>
+            <li><i class="fa-brands fa-r-project"></i> RStudio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page contact-page" id="contact">
+      <div class="card contact-card reveal">
+        <p class="eyebrow">Get In Touch</p>
+        <h2>Contact</h2>
+
+        <p>
+          I’m open to software development opportunities, internships, and project conversations. You can reach me through email, LinkedIn, or GitHub.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn" href="mailto:yaman.aleryani@gmail.com">
+            <i class="fa-solid fa-envelope"></i> Email Me
+          </a>
+
+          <a class="btn-secondary" href="https://www.linkedin.com/in/yaman-al-eryani-1358431bb/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+
+          <a class="btn-secondary" href="https://github.com/ymn056" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- PAGE 2: PROJECTS -->
-  <section class="page" id="projects">
-    <section class="card reveal">
-      <h2>Projects</h2>
-
-      <div class="projects-grid">
-        <!-- WORDLE PLACEHOLDER -->
-        <article class="project-card" id="proj-wordle">
-          <div class="project-thumb">
-            <span class="project-badge">Game</span>
-            <div class="thumb-emoji">🧩</div>
-          </div>
-          <h3>Custom Wordle (Dictionary-powered)</h3>
-          <p class="project-meta">Vanilla JS • Dictionaries • UI/UX</p>
-          <div class="project-actions">
-            <button class="btn-sm" data-open="wordleModal">Learn More</button>
-            <a class="btn-link" href="https://github.com/yourusername/wordle" target="_blank">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </section>
-
-  <!-- PROJECT MODAL: WORDLE -->
-  <div class="modal" id="wordleModal" aria-hidden="true">
-    <div class="modal-card project-modal-card">
-      <button class="modal-close" data-close="wordleModal" aria-label="Close">&times;</button>
-      <h3>Custom Wordle (Dictionary-powered)</h3>
-
-      <div class="project-sections">
-        <section>
-          <h4>🎯 Project Overview</h4>
-          <p>A browser-based Wordle clone that uses curated dictionaries for valid guesses and daily targets. Built to explore word lists, input validation, and clear feedback UX.</p>
-        </section>
-
-        <section>
-          <h4>🧰 Technologies Used</h4>
-          <p>HTML, CSS, JavaScript. Word lists (JSON), state management, localStorage for streaks.</p>
-        </section>
-
-        <section>
-          <h4>🔑 Key Learnings</h4>
-          <p>Dictionary lookups and performance, keyboard UX, accessibility for color feedback, and clean component-like JS without frameworks.</p>
-        </section>
-
-        <section>
-          <h4>🚀 Future Development</h4>
-          <p>Daily puzzle seed, hard mode, statistics dashboard, shareable results, and mobile-first keyboard.</p>
-        </section>
-      </div>
-
-      <div class="modal-actions">
-        <a class="btn" href="https://github.com/yourusername/wordle" target="_blank">
-          <i class="fa-brands fa-github"></i> View on GitHub
-        </a>
-        <button class="btn-outline" data-close="wordleModal">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- PAGE 3: SKILLS -->
-  <section class="page" id="skills">
-    <section class="card reveal">
-      <h2>Skills</h2>
-
-      <!-- Languages -->
-      <div class="skill-block">
-        <h3><span class="emoji">💻</span> Languages</h3>
-        <ul class="skill-list">
-          <li><i class="fa-brands fa-html5"></i> HTML5</li>
-          <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
-          <li><i class="fa-brands fa-js"></i> JavaScript</li>
-          <li><i class="fa-brands fa-java"></i> Java</li>
-          <li><i class="fa-brands fa-python"></i> Python</li>
-          <li><i class="fa-solid fa-c"></i> C / C++</li>
-          <li><i class="fa-brands fa-r-project"></i> R</li>
-        </ul>
-      </div>
-
-      <!-- Tools -->
-      <div class="skill-block">
-        <h3><span class="emoji">🧰</span> Tools & Platforms</h3>
-        <ul class="skill-list">
-          <li><i class="fa-brands fa-github"></i> Git & GitHub</li>
-          <li><i class="fa-brands fa-docker"></i> Docker</li>
-          <li><i class="fa-brands fa-visual-studio"></i> Visual Studio Code</li>
-          <li><i class="fa-brands fa-microsoft"></i> Microsoft Office</li>
-          <li><i class="fa-brands fa-r-project"></i> R / RStudio</li>
-        </ul>
-      </div>
-    </section>
-  </section>
-
-  <!-- CONTACT MODAL -->
   <div class="modal" id="contactModal" aria-hidden="true">
     <div class="modal-card">
-      <button class="modal-close" id="closeContact" aria-label="Close">&times;</button>
-      <h3>Send me a message</h3>
-      <!-- Formspree (replace YOUR_FORM_ID) -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-        <label>
-          Name
-          <input type="text" name="name" placeholder="Your name" required>
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" placeholder="you@example.com" required>
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="5" placeholder="Say hi 👋" required></textarea>
-        </label>
-        <button type="submit" class="btn">Send</button>
-      </form>
-      <div class="modal-foot">
-        or email me directly:
-        <a href="mailto:yaman.aleryani@gmail.com">yaman.aleryani@gmail.com</a>
+      <button class="modal-close" id="closeContact" aria-label="Close contact window">&times;</button>
+
+      <p class="eyebrow">Contact</p>
+      <h3>Let’s connect</h3>
+      <p>You can reach me directly through email, LinkedIn, or GitHub.</p>
+
+      <div class="modal-contact-links">
+        <a href="mailto:yaman.aleryani@gmail.com">
+          <i class="fa-solid fa-envelope"></i> yaman.aleryani@gmail.com
+        </a>
+
+        <a href="https://www.linkedin.com/in/yaman-al-eryani-1358431bb/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+
+        <a href="https://github.com/ymn056" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
       </div>
     </div>
   </div>
